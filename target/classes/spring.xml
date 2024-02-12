@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!--
+    bean definitions here -->
+    <!-- Your bean definitions go here -->
+
+
+    <!-- <bean
+        id="triangle1" class="springProj.Triangle" autowire="byName">
+    </bean> -->
+
+
+    <bean id="PointA" class="springProj.point">
+        <qualifier value="circlerelated"></qualifier>
+        <property name="x" value="0" />
+        <property name="y" value="0" />
+    </bean>
+
+    <bean id="PointB" class="springProj.point">
+
+        <property name="x" value="0" />
+        <property name="y" value="20" />
+    </bean>
+
+    <bean id="center" class="springProj.point">
+
+        <property name="x" value="2" />
+        <property name="y" value="0" />
+    </bean>
+
+    <!-- <alias name="triangle" alias="triangle-alias" />
+    <bean class="springProj.DisplayBeanPostProcessor"></bean> -->
+    <!-- 
+    <bean id="orgInfo" class="springProj.OrgInfo">
+        <property name="namesArr">
+            <array>
+                <value>Kishan</value>
+                <value>Sudha</value>
+                <value>Raj</value>
+                <value>Kishan</value>
+            </array>
+        </property>
+
+        <property name="empNameList">
+            <list>
+                <value>Sean</value>
+                <value>Tom</value>
+                <value>Jimmy</value>
+                <value>Sean</value>
+            </list>
+        </property>
+
+        <property name="empIdsSet">
+            <set>
+                <value>10009</value>
+                <value>10008</value>
+                <value>10009</value>
+            </set>
+        </property>
+        <property name="treasure">
+            <map>
+                <entry key="1" value="first"> </entry>
+                <entry key="2" value="second"> </entry>
+                <entry key="3" value="third"> </entry>
+            </map>
+        </property>
+        <property name="userinfo">
+            <props>
+                <prop key="nyc"> ojaoaj</prop>
+                <prop key="jfk"> ojdddaoaj</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="first" class="springProj.First">
+        <property name="name" value="hi alll"></property>
+
+
+    </bean>
+
+    <bean id="second" class="springProj.Second" parent="first">
+        <property name="name" value="newyork"></property>
+        <property name="rollno" value="99"></property>
+
+
+    </bean> -->
+
+
+    <context:annotation-config />
+    <context:component-scan base-package="springProj">
+    </context:component-scan>
+
+
+</beans>
